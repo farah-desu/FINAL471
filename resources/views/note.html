@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .note-taker {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            color: #000;
+        }
+
+        .note-taker h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .note-taker textarea {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 10px;
+            background: rgba(54, 54, 54, 0.8);
+            resize: none;
+        }
+
+        .note-taker button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .note-taker button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .note-list {
+            list-style: none;
+            padding: 0;
+            max-height: 150px;
+            overflow-y: auto;
+            margin-top: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            background: rgba(63, 63, 63, 0.689);
+        }
+
+        .note-list li {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .note-list li:last-child {
+            border-bottom: none;
+        }
+
+        .note-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .note-list::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        .note-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="note-taker" id="note-taker">
+        <h2>Notes</h2>
+        <textarea id="note-input" placeholder="Write a note..."></textarea>
+        <button id="add-note">Add Note</button>
+        <ul class="note-list" id="note-list"></ul>
+    </div>
+
+    <script>
+        const noteInput = document.getElementById('note-input');
+        const noteList = document.getElementById('note-list');
+        const addNoteButton = document.getElementById('add-note');
+
+        // Add note functionality
+        addNoteButton.addEventListener('click', () => {
+            const noteText = noteInput.value.trim();
+            if (noteText) {
+                const noteItem = document.createElement('li');
+                noteItem.textContent = noteText;
+                noteList.appendChild(noteItem);
+                noteInput.value = '';
+            }
+        });
+
+        // Simulated data fetch (replace with your Laravel API calls)
+        window.addEventListener('DOMContentLoaded', () => {
+            // Example of pre-loaded notes
+            const notes = ["Sample Note 1", "Sample Note 2"];
+            notes.forEach(note => {
+                const noteItem = document.createElement('li');
+                noteItem.textContent = note;
+                noteList.appendChild(noteItem);
+            });
+        });
+    </script>
+</body>
+</html>

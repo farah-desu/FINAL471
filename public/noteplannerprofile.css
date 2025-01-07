@@ -1,0 +1,270 @@
+/* Reset */
+body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #20232a;
+    color: #fff;
+}
+
+/* Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #2c2f3b;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #9da3b4;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #9da3b4;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #3a3f51;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Main Content */
+.content {
+    width: 80%;
+    padding: 20px;
+    background-color: #1e1e2e;
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 10px; /* Adjusts spacing between the profile icon and text */
+}
+
+.header h1 {
+    margin: 0; /* Removes extra margin around the heading */
+    font-size: 1.8rem; /* Adjust font size if needed */
+}
+
+.header img {
+    width: 50px; /* Set the size of the profile icon */
+    height: 50px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 2px solid #ccc; /* Optional: Adds a border */
+    margin: 0; /* Removes extra margin */
+}
+
+
+
+.add-task {
+    background-color: #4f7ffc;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status .active-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.env-link {
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit; /* Inherits the text color */
+}
+/* Profile Section and Stuff Section for planner */
+.profile-section,.planner-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.academic-info, .profile-picture, .email-info,.uname,.tasks-section,.assignments-section
+,.goals-section{
+    background-color: #2c2f3b;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h3 {
+    color: #9da3b4;
+    font-size: 18px;
+}
+
+button.change-btn {
+    align-self: flex-end;
+    background-color: #4f7ffc;
+    border: none;
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.change-btn:hover {
+    background-color: #3d6ce0;
+}
+
+.profile-picture img {
+    width: 25%; /* Scale down to 80% (100% * 0.8 = 125% of the reduced size) */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    display: block; /* Ensures no extra space around the image */
+    margin: 0 auto; /* Center the image within its container */
+}
+
+
+p {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+.profile-link {
+    display: flex;
+    align-items: center; /* Aligns profile picture and text vertically */
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit; /* Inherits the text color */
+    gap: 10px; /* Adds space between the profile picture and text */
+}
+
+.profile-link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc; /* Optional border */
+}
+
+.profile-link h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Adjust font size as needed */
+}
+.profile-img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Ensure equal width and height for circular effect */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    border: 2px solid #ccc; /* Optional border for aesthetics */
+    margin: 10px 0; /* Adds spacing around the image */
+}
+.menu-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    display: flex; /* Align the image and text horizontally */
+    align-items: center; /* Center-align the image and text */
+    gap: 10px; /* Add spacing between the image and text */
+}
+
+.menu-link img {
+    width: 24px; /* Adjust size of the icon */
+    height: 24px;
+}
+
+/* Main container for notes */
+.notes-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    color: white;
+    overflow-x: hidden; /* Prevent overflow outside the container */
+  }
+  
+  /* Add note button */
+  .add-note-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .add-note-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Scrollable notes container */
+  .notes-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .notes-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .notes-scroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Individual note card */
+  .note {
+    min-width: 200px;
+    padding: 15px;
+    background-color: #252850;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .note:hover {
+    background-color: #39416d;
+  }
+  
+  /* Prevent horizontal scrolling on the entire body */
+  body {
+    overflow-x: hidden;
+  }
+  

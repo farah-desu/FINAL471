@@ -1,0 +1,130 @@
+ 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.2s ease-in-out;
+  } 
+  
+  main {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }  
+  
+  
+  header {
+    background-color: #313131;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  nav a:hover {
+    background-color: #e2e2e2;
+    color: #000;
+  }
+  
+  nav a.active {
+    background-color: #007bff;
+    color: #fff;
+  } 
+  
+  
+  table {
+    margin-top: 3rem;
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  table tbody tr:hover {
+    background-color: #f1f1f1;
+  } 
+  
+  form {
+    width: 300px;
+    margin-top: 3rem;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  form .btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #8e44ad;;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form .btn:hover {
+    background-color: #0056b3;
+  } 
